@@ -7,6 +7,7 @@ import Portfolio from './page/portfolio/portfolio';
 import Contact from './page/contact/contact';
 import ERROR_404 from './page/404/404';
 import {Route, BrowserRouter, Routes} from 'react-router-dom';
+import Detail from './page/portfoliodetail/detail';
 
 
 
@@ -49,6 +50,7 @@ export default function Router() {
         <Route path="/service" element={<Service />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/portfolio" element={<Portfolio />}></Route>
+        <Route path="/portfolio/:id" element={<Detail />}></Route>
 
     </Routes>
     </>
