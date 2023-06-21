@@ -1,0 +1,184 @@
+header {
+  width: 270px;
+  /* background: var(--bg-black-100); */
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 100%;
+  z-index: 10;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding : 10px;
+  background-image: url(../../assets/images/light_background.png);
+
+}
+
+.logo {
+  height: 25vh;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.logo img{
+  height: 80px;
+width: 80px;
+border-radius: 50%;
+animation : bolb 4s linear infinite;
+}
+
+@keyframes bolb {
+  0%{
+border-radius: 64% 36% 27% 73% / 55% 58% 42% 45%;
+  }
+  25%{
+border-radius: 73% 27% 26% 38% / 73% 36% 64% 27%;
+
+  }
+  50%{
+border-radius: 28% 72% 46% 44% / 49% 40% 60% 51%;
+
+  }
+75%{
+border-radius: 40% 60% 70% 30% / 47% 62% 38% 53%;
+
+}
+100%{
+border-radius: 64% 36% 27% 73% / 55% 58% 42% 45%;
+
+}
+}
+
+.logo h1 {
+  color: transparent;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.logo h1::before {
+  content: "ASHISH";
+  font-family: 'Dancing Script', cursive;
+  text-shadow: 0px 0px 3px rgba(0,0,0,.3);
+  position: absolute;
+  color: var(--skin-color);
+  top: 0;
+  left: 0;
+  border-right: 2px solid var(--skin-color);
+  animation: slide 3s linear infinite;
+  overflow: hidden;
+}
+@keyframes slide {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+nav {
+  height: 65vh;
+width: 100%;
+}
+ul {
+  list-style: none;
+}
+ul li{
+  margin-bottom: 5vh;
+}
+ul li a {
+  display: flex;
+justify-content: center;
+align-items: center;
+gap: 5px;
+font-weight: 700;
+color: var(--skin-color);
+padding: 10px;
+}
+.link_active{
+  background : #f2f2fc;
+  border-radius : 10px;
+}
+/* ul li.active{
+  background : var(--bg-black-900);
+  border-radius : 10px;
+} */
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icons {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 993px) {
+  header {
+    width: 70px;
+  }
+  .nav_link {
+    display: none;
+  }
+  .icons {
+    font-size: 30px;
+  }
+  section {
+    left: 70px;
+  }
+  .logo img {
+    height: 50px;
+    width: 50px;
+  }
+  .footer p{
+    font-size : 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    width: 100%;
+    background: var(--bg-black-100);
+    position: fixed;
+    left: 0;
+    top: 90vh;
+    bottom: 100%;
+    z-index: 10;
+    height: 10vh;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    padding : 10px;
+  }
+  section {
+    left: 0px;
+  }
+  .logo{
+    display: none;
+  }
+  .footer{
+    display : none;
+  }
+  nav {
+  height: 100%;
+  width: 100%;
+  }
+  ul{
+    display : grid;
+    grid-template-columns: repeat(5, auto);
+    width: 100%;
+  }
+  ul li a {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+  color: var(--skin-color);
+  padding: 10px;
+  }
+}

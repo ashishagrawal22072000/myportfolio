@@ -1,0 +1,54 @@
+.theme_container{
+display: flex;
+justify-content: center;
+align-items: center;
+position: fixed;
+right: 50px;
+gap: 20px;
+top: 50px;
+z-index: 900;
+}
+.theme_icon{
+    color: var(--skin-color);
+    cursor: pointer;
+}
+
+.multi_theme{
+    display: flex;
+}
+
+.multi_theme_container{
+    height: 50px;
+width: 120px;
+    text-align: center;
+}
+.select_theme{
+    display : flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.select_theme div{
+    height: 20px;
+width: 20px;
+    border-radius: 50%;
+}
+
+.select_theme .red_theme{
+    background-color: #ec1839;
+}
+
+.select_theme .yellow_theme{
+    background-color: #F2BE22;
+}
+
+.select_theme .green_theme{
+    background-color: #8EAC50;
+}
+
+.select_theme .blue_theme{
+    background-color: #46458C;
+}
+.select_theme .pink_theme{
+    background-color: #FFBDF7;
+}

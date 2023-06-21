@@ -1,0 +1,138 @@
+.about{
+    padding: 50px;
+}
+.about .about_container{
+    /* height: 80vh; */
+}
+.page_heading .line1{
+
+    height: 5px;
+width: 50px;
+background: var(--skin-color);
+border-radius: 10px;
+margin-top: 5px;
+}
+.page_heading .line2{
+    height: 5px;
+width: 25px;
+background: var(--skin-color);
+border-radius: 10px;
+margin-top: 5px;
+
+}
+
+.introduction p{
+    line-height: 30px;
+}
+
+.skill_box{
+    position : relative;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5px;
+}
+.skill_box .skill_card{
+    position : relative;
+    /* width : 220px; */
+    height: 200px;
+}
+
+.skill_box .skill_card .percent{
+    position: relative;
+    width : 150px;
+    height: 150px;
+}
+.skill_box .skill_card .percent h3{
+    position: absolute;
+top: 60px;
+left: 45px;
+}
+.skill_box .skill_card .percent svg{
+    position: relative;
+    width : 150px;
+    height: 150px;
+}
+
+.skill_box .skill_card .percent svg circle{
+    width : 100%;
+    height: 100%;
+    fill : transparent;
+    stroke-width: 2px;
+    stroke: #191919;
+    transform: translate(5px, 5px);
+}
+
+.skill_box .skill_card .percent svg circle:nth-child(2){
+    stroke: var(--skin-color);
+    stroke-dasharray: var(--dasharray);
+    stroke-dashoffset: calc(440 - (440 * 85) / 100);
+}
+
+
+.education_container{
+    display : grid;
+    grid-template-columns: repeat(2,1fr);
+    gap : 5px;
+}
+
+.education_container .education_box .education .edu_box::before{
+    content: '';
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background:var(--skin-color);
+    display: inline-block;
+    position: relative;
+    top: 35px;
+}
+
+.education_container .education_box .education .edu_box div{
+    position: relative;
+    left:25px;
+}
+
+.education_container .experience_box .experience .exp_box::before{
+    content: '';
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background:var(--skin-color);
+    display: inline-block;
+    position: relative;
+    top: 35px;
+}
+
+.education_container .experience_box .experience .exp_box div{
+    position: relative;
+    left:25px;
+}
+
+
+@media screen and (max-width:768px) {
+    .skill_box{
+        grid-template-columns: repeat(3,1fr);
+        place-items: center;
+
+    }
+}
+
+@media screen and (max-width:542px) {
+    .skill_box {
+        grid-template-columns: repeat(2,1fr);
+        place-items: center;
+
+      }
+      .education_container {
+        /* display: grid; */
+        grid-template-columns: repeat(1,1fr);
+        /* gap: 5px; */
+      }
+}
+
+@media screen and (max-width:400px) {
+    .skill_box {
+        grid-template-columns: repeat(1,1fr);
+        place-items: center;
+      }
+      
+}
