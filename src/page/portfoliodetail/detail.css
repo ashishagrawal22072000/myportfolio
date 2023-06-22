@@ -27,7 +27,6 @@ margin-top: 5px;
 .detail_container .detail_box{
     /* height: 300px; */
     padding : 25px;
-    background: #f2f2fc;
     /* overflow: hidden; */
 }
 
@@ -52,8 +51,30 @@ margin-top: 5px;
 
 }
 
+.more_container{
+    display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 5px;
+padding: 20px;
+place-items: center;
+background: #f2f2fc
+}
+.more_container .more_box{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.more_container .more_box .icons{
+    color: var(--skin-color);
+}
 @media screen and (max-width : 600px) {
     .detail_container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (max-width : 425px) {
+    .more_container{
         grid-template-columns: repeat(1, 1fr);
     }
 }

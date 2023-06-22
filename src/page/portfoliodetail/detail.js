@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useParams } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 import { get_project_by_id } from '../../redux/action'
 import { aboutLine1, aboutLine2, homeMotion1, slideMotion } from '../../motion'
 import {motion} from 'framer-motion'
 import "./detail.css"
+import {FaUsers,FaGlobeAfrica} from "react-icons/fa";
+import {MdIncompleteCircle} from "react-icons/md"
+import {AiOutlineFileDone} from "react-icons/ai";
 export default function Detail() {
     const {id} = useParams()
     const [data, setData] = useState()
@@ -33,6 +36,24 @@ export default function Detail() {
             <br />
             <p>{data?.about}</p>
         </div>
+        <br />
+        <div className='more_container'>
+          <div className='more_box'>
+            <FaUsers className='icons' />
+            <h3>Team({data?.teammember})</h3>          
+          </div>
+
+          <div className='more_box'>
+            <NavLink to={data?.link}> <FaGlobeAfrica className='icons' /></NavLink>
+            <h3>Website</h3>          
+          </div>
+
+          <div className='more_box'>
+            {data?.current_status == 'inprogress' ? <MdIncompleteCircle className='icons' /> : <AiOutlineFileDone className='icons' /> }
+            <h3>State</h3>          
+          </div>
+        </div>
+
         <br />
         <div className="project_role">
         <motion.div className="page_heading" initial={homeMotion1.initial} animate={homeMotion1.final} transition={{type : "spring", duration : .5}}>

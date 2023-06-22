@@ -40,7 +40,10 @@ body.dark .service_container .service_box{
   background-color: #504e70;
 
 }
+body.dark .more_container{
+  background-color: #504e70;
 
+}
 *{
   margin : 0;
   padding : 0;
