@@ -2,7 +2,14 @@ import React from "react";
 import "./about.css";
 import {motion} from 'framer-motion';
 import { aboutLine1, aboutLine2, buttonMotion, homeMotion1, slideMotion } from "../../motion";
+import Skillcard from "../../components/skillCard/skillcard";
+import { useNavigate } from "react-router-dom";
+
 export default function About() {
+  const navigate = useNavigate();
+  const hireMe = ()=>{
+    navigate("/contact");
+  }
   return (
     <motion.section className="about" initial={slideMotion.initial} animate={slideMotion.final} transition={{type : "spring", duration : 1}}>
       <div className="about_container">
@@ -47,7 +54,7 @@ export default function About() {
         <br />
         <div className="btn_container">
           <motion.button  className="btn" initial={buttonMotion.initial} animate={buttonMotion.final} transition={{duration : 1}}>Download CV</motion.button>
-          <motion.button  className="btn" initial={buttonMotion.initial} animate={buttonMotion.final} transition={{duration : 1}}>Hire Me</motion.button>
+          <motion.button  className="btn" initial={buttonMotion.initial} animate={buttonMotion.final} transition={{duration : 1}} onClick={hireMe}>Hire Me</motion.button>
         </div>
       </div>
       </div>
@@ -61,104 +68,13 @@ export default function About() {
        </div>
         <br />
         <div className="skill_box">
-          <div className="skill_card">
-            <div className="percent">
-              <svg>
-                <circle cx={70} cy={70} r={70}></circle>
-                <circle
-                  cx={70}
-                  cy={70}
-                  r={70}
-                  style={{ "--dasharray": 400 }}
-                ></circle>
-              </svg>
-              <h3>HTML</h3>
-            </div>
-          </div>
-          <div className="skill_card">
-            <div className="percent">
-              <svg>
-                <circle cx={70} cy={70} r={70}></circle>
-                <circle
-                  cx={70}
-                  cy={70}
-                  r={70}
-                  style={{ "--dasharray": 360 }}
-                ></circle>
-              </svg>
-              <h3>CSS</h3>
-            </div>
-          </div>
-          <div className="skill_card">
-            <div className="percent">
-              <svg>
-                <circle cx={70} cy={70} r={70}></circle>
-                <circle
-                  cx={70}
-                  cy={70}
-                  r={70}
-                  style={{ "--dasharray": 390 }}
-                ></circle>
-              </svg>
-              <h3>JS</h3>
-            </div>
-          </div>
-          <div className="skill_card">
-            <div className="percent">
-              <svg>
-                <circle cx={70} cy={70} r={70}></circle>
-                <circle
-                  cx={70}
-                  cy={70}
-                  r={70}
-                  style={{ "--dasharray": 410 }}
-                ></circle>
-              </svg>
-              <h3>React.js</h3>
-            </div>
-          </div>
-          <div className="skill_card">
-            <div className="percent">
-              <svg>
-                <circle cx={70} cy={70} r={70}></circle>
-                <circle
-                  cx={70}
-                  cy={70}
-                  r={70}
-                  style={{ "--dasharray": 370 }}
-                ></circle>
-              </svg>
-              <h3>Node.js</h3>
-            </div>
-          </div>
-          <div className="skill_card">
-            <div className="percent">
-              <svg>
-                <circle cx={70} cy={70} r={70}></circle>
-                <circle
-                  cx={70}
-                  cy={70}
-                  r={70}
-                  style={{ "--dasharray": 380 }}
-                ></circle>
-              </svg>
-              <h3>Express.js</h3>
-            </div>
-          </div>
-          <div className="skill_card">
-            <div className="percent">
-              <svg>
-                <circle cx={70} cy={70} r={70}></circle>
-                <circle
-                  cx={70}
-                  cy={70}
-                  r={70}
-                  style={{ "--dasharray": 360 }}
-                ></circle>
-              </svg>
-              <h3>MongoDB</h3>
-            </div>
-          </div>
+          <Skillcard skill="HTML" percent={400} />
+          <Skillcard skill="CSS" percent={360} />
+          <Skillcard skill="JS" percent={390} />
+          <Skillcard skill="React.js" percent={410} />
+          <Skillcard skill="Node.js" percent={370} />
+          <Skillcard skill="Next.js" percent={350} />
+          <Skillcard skill="MongoDB" percent={360} />
         </div>
       </div>
 

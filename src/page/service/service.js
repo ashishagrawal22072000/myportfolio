@@ -22,7 +22,7 @@ export default function Service() {
       </div>
 
       <div className="service_box">
-        <MdOutlineDeveloperMode className='icon' />
+        <MdOutlineDeveloperMode className='icon' /> 
         <h3>Web Development</h3>
         <p>handle tasks such as implementing user interfaces, developing server-side functionality, integrating databases, and managing the overall architecture of a web project</p>
       </div>

@@ -16,7 +16,7 @@ export default function Header() {
         <nav>
           <ul>
             <li>
-              <NavLink to="/" className={(props) => props.isActive ? 'link_active' : ''}><AiOutlineHome className="icons" />
+              <NavLink to="/myportfolio" className={(props) => props.isActive ? 'link_active' : ''}><AiOutlineHome className="icons" />
                <p className="nav_link">Home</p>
                </NavLink>
               </li><li>

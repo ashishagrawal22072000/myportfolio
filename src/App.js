@@ -8,6 +8,7 @@ import Theme from "./theme/theme";
 function App() {
   useEffect(() =>{
     localStorage.setItem("theme" , "light");
+    localStorage.setItem("isAdmin" , false);
   },[])
   return (
    <>
